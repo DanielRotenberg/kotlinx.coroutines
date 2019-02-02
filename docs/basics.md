@@ -160,9 +160,9 @@ import kotlinx.coroutines.*
 <div class="sample" markdown="1" theme="idea" data-highlight-only>
  
 ```kotlin
-class MyTest {
+class SimpleTest {
     @Test
-    fun testMySuspendingFunction() = runBlocking<Unit> {
+    fun testSuspendingFunction() = runBlocking<Unit> {
         // here we can use suspending functions using any assertion style that we like
     }
 }
