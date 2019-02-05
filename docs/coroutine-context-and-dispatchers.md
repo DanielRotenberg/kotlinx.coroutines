@@ -72,7 +72,7 @@ fun main() = runBlocking<Unit> {
     launch(Dispatchers.Default) { // will get dispatched to DefaultDispatcher 
         println("Default               : I'm working in thread ${Thread.currentThread().name}")
     }
-    launch(newSingleThreadContext("MyOwnThread")) { // will get its own new thread
+    launch(newSingleThreadContext("OwnThread")) { // will get its own new thread
         println("newSingleThreadContext: I'm working in thread ${Thread.currentThread().name}")
     }
 //sampleEnd    
