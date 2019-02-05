@@ -88,7 +88,7 @@ It produces the following output (maybe in different order):
 ```text
 Unconfined            : I'm working in thread main
 Default               : I'm working in thread DefaultDispatcher-worker-1
-newSingleThreadContext: I'm working in thread MyOwnThread
+newSingleThreadContext: I'm working in thread OwnThread
 main runBlocking      : I'm working in thread main
 ```
 
