@@ -282,7 +282,7 @@ import kotlinx.coroutines.*
 
 fun main() = runBlocking<Unit> {
 //sampleStart
-    println("My job is ${coroutineContext[Job]}")
+    println("Current job is ${coroutineContext[Job]}")
 //sampleEnd    
 }
 ```
@@ -294,10 +294,10 @@ fun main() = runBlocking<Unit> {
 It produces something like that when running in [debug mode](#debugging-coroutines-and-threads):
 
 ```
-My job is "coroutine#1":BlockingCoroutine{Active}@6d311334
+Current job is "coroutine#1":BlockingCoroutine{Active}@6d311334
 ```
 
-<!--- TEST lines.size == 1 && lines[0].startsWith("My job is \"coroutine#1\":BlockingCoroutine{Active}@") -->
+<!--- TEST lines.size == 1 && lines[0].startsWith("Current job is \"coroutine#1\":BlockingCoroutine{Active}@") -->
 
 Note, that [isActive] in [CoroutineScope] is just a convenient shortcut for
 `coroutineContext[Job]?.isActive == true`.
